@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Ind05_Inman_Joshua">
         <activity
+            android:name=".StateDetails"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

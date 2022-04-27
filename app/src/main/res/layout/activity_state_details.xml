@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:outlineProvider="none"
+    tools:context=".StateDetails">
+
+    <ImageView
+        android:id="@+id/ivStateFlagImage"
+        android:layout_width="301dp"
+        android:layout_height="258dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ok_flag" />
+
+    <TextView
+        android:id="@+id/tvStateNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:outlineProvider="none"
+        android:text="Oklahoma"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivStateFlagImage" />
+
+    <ImageView
+        android:id="@+id/ivStateMapImage"
+        android:layout_width="298dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        android:outlineProvider="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStateNameLabel"
+        app:srcCompat="@drawable/ok_map" />
+
+    <TextView
+        android:id="@+id/tvStateSizeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="68,595 Sq. Miles"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivStateMapImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
