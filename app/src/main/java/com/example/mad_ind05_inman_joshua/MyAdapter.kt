@@ -3,7 +3,6 @@ package com.example.mad_ind05_inman_joshua
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -31,7 +30,7 @@ class MyAdapter(val stateList: List<State>, private val context: Context) :
             val intent = Intent(context, StateDetails::class.java)
             intent.putExtra("name", state.name)
             intent.putExtra("size", state.size)
-            //startActivity(intent)
+            context.startActivity(intent)
         }
     }
 
