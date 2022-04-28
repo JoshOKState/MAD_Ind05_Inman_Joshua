@@ -14,4 +14,10 @@ class MainActivity : AppCompatActivity() {
         val adapter = MyAdapter(StateDataModel.stateList, this)
         binding?.rvStateDetails?.adapter = adapter
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        binding = null
+    }
 }
