@@ -4,10 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mad_ind05_inman_joshua.databinding.RecyclerviewRowBinding
-import kotlin.coroutines.coroutineContext
 
 class MyAdapter(val stateList: List<State>, private val context: Context) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
