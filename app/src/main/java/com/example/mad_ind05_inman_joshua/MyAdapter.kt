@@ -1,11 +1,18 @@
 package com.example.mad_ind05_inman_joshua
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mad_ind05_inman_joshua.databinding.RecyclerviewRowBinding
+import kotlin.coroutines.coroutineContext
 
-class MyAdapter(val stateList: List<State>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(val stateList: List<State>, private val context: Context) :
+    RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+
     inner class MyViewHolder(val binding: RecyclerviewRowBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindItem(state: State) {
             binding.tvStateName.text = state.name
@@ -20,6 +27,12 @@ class MyAdapter(val stateList: List<State>) : RecyclerView.Adapter<MyAdapter.MyV
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val state = stateList[position]
         holder.bindItem(state)
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, StateDetails::class.java)
+            intent.putExtra("name", state.name)
+            intent.putExtra("size", state.size)
+            //startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

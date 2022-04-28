@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-        val adapter = MyAdapter(StateDataModel.stateList)
+        val adapter = MyAdapter(StateDataModel.stateList, this)
         binding?.rvStateDetails?.adapter = adapter
     }
 }
