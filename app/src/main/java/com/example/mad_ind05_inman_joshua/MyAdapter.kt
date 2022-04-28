@@ -30,6 +30,8 @@ class MyAdapter(val stateList: List<State>, private val context: Context) :
             val intent = Intent(context, StateDetails::class.java)
             intent.putExtra("name", state.name)
             intent.putExtra("size", state.size)
+            intent.putExtra("flagImageName", state.flagImageName)
+            intent.putExtra("mapImageName", state.mapImageName)
             context.startActivity(intent)
         }
     }

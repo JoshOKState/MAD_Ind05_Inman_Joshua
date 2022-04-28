@@ -23,9 +23,13 @@ class StateDetails : AppCompatActivity() {
         } else {
             val stateName = extras.getString("name").orEmpty()
             val stateSize = extras.getString("size").orEmpty()
+            val stateFlagImageResourceId: Int = resources.getIdentifier(extras.getString("flagImageName").orEmpty(), "drawable", packageName)
+            val stateMapImageResourceId: Int = resources.getIdentifier(extras.getString("mapImageName").orEmpty(), "drawable", packageName)
 
             binding?.tvStateNameLabel?.text = stateName
             binding?.tvStateSizeLabel?.text = "$stateSize Sq Ft"
+            binding?.ivStateFlagImage?.setImageResource(stateFlagImageResourceId)
+            binding?.ivStateMapImage?.setImageResource(stateMapImageResourceId)
         }
     }
 
