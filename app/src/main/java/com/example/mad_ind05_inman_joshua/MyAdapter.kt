@@ -27,11 +27,14 @@ class MyAdapter(val stateList: List<State>, private val context: Context) :
         val state = stateList[position]
         holder.bindItem(state)
         holder.itemView.setOnClickListener {
+            // Create our intent
             val intent = Intent(context, StateDetails::class.java)
+            // Sending details about the selected state
             intent.putExtra("name", state.name)
             intent.putExtra("size", state.size)
             intent.putExtra("flagImageName", state.flagImageName)
             intent.putExtra("mapImageName", state.mapImageName)
+            // Start the destination activity
             context.startActivity(intent)
         }
     }
